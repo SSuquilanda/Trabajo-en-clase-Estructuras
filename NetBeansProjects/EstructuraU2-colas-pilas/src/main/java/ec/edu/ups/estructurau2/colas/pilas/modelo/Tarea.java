@@ -33,6 +33,12 @@ public class Tarea <T> {
     public void setAtributo(T atributo) {
         this.atributo = atributo;
     }
+
+    @Override
+    public String toString() {
+        return "Tarea{" + "id=" + id + ", atributo=" + atributo + '}';
+    }
+    
     
 
 }

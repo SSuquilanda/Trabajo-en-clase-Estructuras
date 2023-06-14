@@ -29,6 +29,11 @@ public class ColaTareas<T> {
     public boolean estaVacia () {
         return colaTareas.isEmpty();
     }
+
+    @Override
+    public String toString() {
+        return "ColaTareas{" + "colaTareas=" + colaTareas + '}';
+    }
     
     
     
