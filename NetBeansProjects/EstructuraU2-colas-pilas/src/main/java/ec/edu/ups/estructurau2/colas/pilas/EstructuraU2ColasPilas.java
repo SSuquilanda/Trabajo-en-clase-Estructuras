@@ -47,13 +47,13 @@ public class EstructuraU2ColasPilas {
         
         //Inserccion colaTareas arregloEnteros
         colaTareasArregloEnteros.agregarTarea(new Tarea(1, n));
-        colaTareasArregloEnteros.agregarTarea(new Tarea(1, v));
-        colaTareasArregloEnteros.agregarTarea(new Tarea(1, a));
+        colaTareasArregloEnteros.agregarTarea(new Tarea(2, v));
+        colaTareasArregloEnteros.agregarTarea(new Tarea(3, a));
         
         //Inserccion colaTareas arregloString
         colaTareasArregloString.agregarTarea(new Tarea(1, k));
-        colaTareasArregloString.agregarTarea(new Tarea(1, p));
-        colaTareasArregloString.agregarTarea(new Tarea(1, m));
+        colaTareasArregloString.agregarTarea(new Tarea(2, p));
+        colaTareasArregloString.agregarTarea(new Tarea(3, m));
 
         
         
@@ -74,18 +74,18 @@ public class EstructuraU2ColasPilas {
             System.out.println("Procesando tarea de la cola: \n\t Sale--> " +tareaProcesada.getId()+" - "+tareaProcesada.getAtributo());
         }
         while (!colaTareasInt.estaVacia()){
-            Tarea<Integer> tareaProcesada = colaTareasInt.procesarTarea();
-            System.out.println("Procesando tarea de la cola: \n\t Sale--> " +tareaProcesada.getId()+" - "+tareaProcesada.getAtributo());
+            Tarea<Integer> tareaProcesadaInt = colaTareasInt.procesarTarea();
+            System.out.println("Procesando tarea de la cola: \n\t Sale--> " +tareaProcesadaInt.getId()+" - "+tareaProcesadaInt.getAtributo());
 
         }
         while (!colaTareasArregloEnteros.estaVacia()){
-            Tarea<int[]> tareaProcesada = colaTareasArregloEnteros.procesarTarea();
-            System.out.println("Procesando tarea de la cola: \n\t Sale--> " +tareaProcesada.getId()+" - "+Arrays.toString(tareaProcesada.getAtributo()));
+            Tarea<int[]> tareaProcesadaArregloEnteros = colaTareasArregloEnteros.procesarTarea();
+            System.out.println("Procesando tarea de la cola: \n\t Sale--> " + tareaProcesadaArregloEnteros.toString());
 
         }
         while (!colaTareasArregloString.estaVacia()){
-            Tarea<String[]> tareaProcesada = colaTareasArregloString.procesarTarea();
-            System.out.println("Procesando tarea de la cola: \n\t Sale--> " +tareaProcesada.getId()+" - "+Arrays.toString(tareaProcesada.getAtributo()));
+            Tarea<String[]> tareaProcesadaArregloString = colaTareasArregloString.procesarTarea();
+            System.out.println("Procesando tarea de la cola: \n\t Sale--> " +tareaProcesadaArregloString.getId());
 
         }
         
@@ -95,10 +95,10 @@ public class EstructuraU2ColasPilas {
   
             System.out.println("Procesando tarea de la pila: \n\t Sale--> " +tareaProcesada.getId()+" - "+tareaProcesada.getAtributo());
         }
-        
-        pilaTareasDeColas.agregarTarea(new Tarea(8,colaTareas));
-        pilaTareasDeColas.agregarTarea(new Tarea(8,colaTareasArregloEnteros));
-        pilaTareasDeColas.agregarTarea(new Tarea(8,colaTareasArregloString));
+        pilaTareasDeColas.agregarTarea(new Tarea(8,colaTareasInt));
+        pilaTareasDeColas.agregarTarea(new Tarea(9,colaTareas));
+        pilaTareasDeColas.agregarTarea(new Tarea(10,colaTareasArregloEnteros));
+        pilaTareasDeColas.agregarTarea(new Tarea(11,colaTareasArregloString));
 
         while (!pilaTareasDeColas.estaVacia()){
             Tarea<ColaTareas> tareaCola = pilaTareasDeColas.procesarTarea();
